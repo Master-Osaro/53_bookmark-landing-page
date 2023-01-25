@@ -125,6 +125,10 @@ nav .logo{
   padding: 4rem 1rem;
 }
 
+.section p{
+  line-height: 1.85rem;
+}
+
 
 /* ======== Hero Section =========  */
 .section__hero .container{
@@ -163,7 +167,10 @@ nav .logo{
 
 
 /* ======== Features Section & Section Extension =========  */
-.section__features .container, .section__extension .container{
+.section__features .container, 
+.section__extension .container,
+.section__faq .container
+{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,6 +181,9 @@ nav .logo{
 .features__text, .section__extension-text{
   max-width: 550px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 
@@ -223,6 +233,8 @@ nav .logo{
   width: 100%;
   max-width: 800px;
 }
+
+
 .section__extension-cards{
   width: 100%;
   display: grid;
@@ -258,6 +270,55 @@ nav .logo{
 .dotted-divider{
   background: url(./images/bg-dots.svg);
   height: 4px;
+}
+
+/* ======== FAQ Section =========  */
+.section__accordion{
+  width: 100%;
+  max-width: 500px;
+}
+
+.accordion-item{
+  padding-bottom: 1.5rem;
+}
+.accordion-item::before{
+  padding-bottom: 1.5rem;
+  content: "";
+  display: block;
+  border-top: 1px solid var(--Grayish-Blue);
+}
+.accordion-item--header{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.accordion-item h4 {
+  font-weight: 400;
+    transition: all .3s;
+}
+.accordion-item:hover h4 {
+    color: var(--Soft-Red);
+}
+.accordion-item--text{
+    margin-top: 3rem;
+}
+.accordion-item--text p{
+    line-height: 1.85rem;
+}
+
+
+.accordion-item--header__btn{
+  position: relative;
+  background: none;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+  transition: all .3s;
+}
+.accordion-item--active .accordion-item--header__btn{
+  transform: rotate(180deg);
 }
 
 /* ======== Footer Section =========  */
