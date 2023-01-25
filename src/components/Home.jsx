@@ -35,23 +35,27 @@ const Home =()=>{
                         got a favourite you’d like us to prioritize.</p>
                     </div>
                     <div className="section__extension-cards">
-                        <div className="section__extension-card">
-                            <img src={logoChrome} alt="" />
+                        <div className="section__extension-card section__extension-card-1">
+                            <div className="img__wrapper"><img src={logoChrome} alt="chrome" /></div> 
                             <h4>Add to Chrome</h4>
                             <p>Minimum version 62</p>
-                            <input type="button" value="Add & Install Extension" />
+                            <div className="dotted-divider"></div>
+                            <div className="btn__wrapper"><input className="btn btn-blue" type="button" value="Add & Install Extension" /></div>
+                            
                         </div>
-                        <div className="section__extension-card">
-                            <img src={logoFirefox} alt="" />
+                        <div className="section__extension-card section__extension-card-2">
+                            <div className="img__wrapper"><img src={logoFirefox} alt="firefox" /></div>
                             <h4>Add to Firefox</h4>
                             <p>Minimum version 55</p>
-                            <input type="button" value="Add & Install Extension" />
+                            <div className="dotted-divider"></div>
+                            <div className="btn__wrapper"><input className="btn btn-blue" type="button" value="Add & Install Extension" /></div>
                         </div>
-                        <div className="section__extension-card">
-                            <img src={logoOpera} alt="" />
+                        <div className="section__extension-card section__extension-card-3">
+                            <div className="img__wrapper"><img src={logoOpera} alt="opera" /></div>
                             <h4>Add to Opera</h4>
                             <p>Minimum version 46</p>
-                            <input type="button" value="Add & Install Extension" />
+                            <div className="dotted-divider"></div>
+                            <div className="btn__wrapper"><input className="btn btn-blue" type="button" value="Add & Install Extension" /></div>
                         </div>
                     </div>
                 </div>

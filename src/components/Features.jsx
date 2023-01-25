@@ -1,5 +1,8 @@
 import featureImage from '../images/illustration-features-tab-1.svg'
+import { featuresTabs } from '../data/data'
+import { useState } from 'react'
 const Features =()=>{
+    const [currentFeatureNum, setCurrentFeatureNum] = useState(0)
     return (
         <div className="section section__features">
             <div className="container">
@@ -10,17 +13,18 @@ const Features =()=>{
                 </div>
                 <div className="features__tabs">
                     <div className="features__tabs-header">
-                        <h3>Simple Bookmarking</h3>
-                        <h3>Speedy Searching</h3>
-                        <h3>Easy Sharing</h3>
+                        {featuresTabs.headers.map((headerTab, index)=>{
+                            return <p key={index} onClick={()=>{setCurrentFeatureNum(index)}} className={`${index==currentFeatureNum?'features__tabs-header--active':''}`}>{headerTab}</p>
+                        })}
                     </div>
                     <div className="features__tabs-content">
                         <div className="features__tabs-content--image">
-                            <img src={featureImage} alt="" />
+                            <img src={featuresTabs.content[currentFeatureNum].image} alt="" />
                         </div>
                         <div className="features__tabs-content--text">
-                            <h2>Bookmark in one click</h2>
-                            <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.</p>
+                            <h2>{featuresTabs.content[currentFeatureNum].title}</h2>
+                            <p>{featuresTabs.content[currentFeatureNum].text}</p>
+                            <button className='btn btn-blue'>{featuresTabs.content[currentFeatureNum].btnText}</button>
                         </div>
                     </div>
                 </div>

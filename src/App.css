@@ -12,6 +12,7 @@
   /* ### Primary */
   
   --Soft-Blue: hsl(231, 69%, 60%);
+  --Soft-Blue-Shadow: hsla(231, 69%, 60%,0.1);
   --Soft-Red: hsl(0, 94%, 66%);
   
   /* ### Neutral */
@@ -29,10 +30,11 @@ body{
   font-size: var(--Font-size);
   font-family: var(--Font-family);
   overflow-x: hidden;
+  color: var(--Grayish-Blue);
 }
 
 h1, h2, h3, h4, h5{
-  color: var(--Dark-Blue);
+  color: var(--Very-Dark-Blue);
   font-weight: 500;
 }
 
@@ -43,6 +45,7 @@ h1, h2, h3, h4, h5{
   cursor: pointer;
   font-family: inherit;
   text-transform: uppercase;
+  width: fit-content;
 }
 
 .btn-primary{
@@ -118,11 +121,13 @@ nav .logo{
   color: var(--Dark-Blue);
 }
 
-.section__hero {
+.section {
   padding: 4rem 1rem;
 }
 
-.section .container{
+
+/* ======== Hero Section =========  */
+.section__hero .container{
   display: flex;
   align-items: center;
 }
@@ -154,4 +159,60 @@ nav .logo{
   right: 0;
   z-index: 2;
   transform: translateX(15rem);
+}
+
+
+/* ======== Features Section & Section Extension =========  */
+.section__features .container, .section__extension .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.features__text, .section__extension-text{
+  max-width: 550px;
+  text-align: center;
+}
+
+
+
+.features__text h2{
+  margin-bottom: 2rem;
+}
+
+.features__tabs-header{
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-bottom: 3rem;
+}
+.features__tabs-header p{
+  padding: 1.5rem 0;
+  font-size: 1.25rem;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+}
+
+
+.features__tabs-header--active{
+  border-bottom: 2px solid var(--Soft-Red);
+  color: var(--Very-Dark-Blue);
+}
+.features__tabs-content{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.features__tabs-content--image{
+  flex: 1;
+}
+.features__tabs-content--text{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
 }

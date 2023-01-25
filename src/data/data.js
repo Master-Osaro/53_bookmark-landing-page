@@ -1,7 +1,7 @@
 import featureImage1 from '../images/illustration-features-tab-1.svg'
 import featureImage2 from '../images/illustration-features-tab-2.svg'
 import featureImage3 from '../images/illustration-features-tab-3.svg'
-export default featuresTabs = {
+export const featuresTabs = {
     "headers" : ["Simple Bookmarking", "Speedy Searching", "Easy Sharing"],
     "content" : [
         {
