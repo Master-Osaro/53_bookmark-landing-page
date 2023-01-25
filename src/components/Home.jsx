@@ -14,11 +14,14 @@ const Home =()=>{
                 <h1>A Simple Bookmark Manager</h1>
                 <p> A clean and simple interface to organize your favourite websites. Open a new 
                     browser tab and see your sites load instantly. Try it for free.</p>
-                    <input type="button" className="btn btn-primary" value="Get it on Chrome" />
-                    <input type="button" className="btn btn-primary" value="  Get it on Firefox" />
+                    <div className="btn__wrapper">
+                        <input type="button" className="btn btn-blue" value="Get it on Chrome" />
+                        <input type="button" className="btn btn-white" value="  Get it on Firefox" />
+                    </div>
+                    
                 </div>
                 <div className="section__hero-img">
-                    <img src={heroIllustration} alt="image mockups" />
+                    <img src={heroIllustration} alt="image mockups"  />
                     <div className="hero-img-bg"></div>
                 </div>
             </div>
