@@ -261,3 +261,45 @@ nav .logo{
 }
 
 /* ======== Footer Section =========  */
+footer{
+  text-align: center;
+  background: var(--Soft-Blue);
+}
+.section__footer-form{
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--White);
+}
+.section__footer-form h2{
+  font-size: 2rem;
+  color: var(--White);
+}
+.section__footer-form .container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.section__footer-form input{
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  border: none;
+  font-family: inherit;
+  width: fit-content;
+}
+.section__footer-form form{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.section__footer{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.section__footer-links{
+  background: var(--Very-Dark-Blue);
+  width: 100%;
+  padding: 2rem 1rem;
+}

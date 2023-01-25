@@ -1,14 +1,19 @@
-import logo from '../images/logo-bookmark.svg'
+import logo from '../images/logo-bookmark-white.svg'
 const Footer =()=>{
     return (
         <footer className="section section__footer">
-            <div className="container">
-                <div className="section__footer-form">
+            <div className="section__footer-form">
+                <div className="container">
                     <p>35,000+ already joined</p>
                     <h2>Stay up-to-date with what we’re doing</h2>
-                    <input type="text" /><button>Contact Us</button>
+                    <form action="">
+                    <input type="text" placeholder='Enter your email Address'/><button className='btn btn-primary'>Contact Us</button>
+                    </form>
+                    
                 </div>
-                <div className="section__footer-links">
+            </div>
+            <div className="section__footer-links">
+                <div className="container">
                 <nav>
                     <div className="logo"><img src={logo} alt="" /></div>
                     <div className="nav-list__container" id="nav-list__container">
@@ -22,7 +27,7 @@ const Footer =()=>{
                     </div>
                 </nav>
                 </div>
-            </div>
+                </div>
         </footer>
     )
 }
