@@ -24,7 +24,8 @@ const Features =()=>{
                         <div className="features__tabs-content--text">
                             <h2>{featuresTabs.content[currentFeatureNum].title}</h2>
                             <p>{featuresTabs.content[currentFeatureNum].text}</p>
-                            <button className='btn btn-blue'>{featuresTabs.content[currentFeatureNum].btnText}</button>
+                            <div className="btn__wrapper"><button className='btn btn-blue'>{featuresTabs.content[currentFeatureNum].btnText}</button></div>
+                            
                         </div>
                     </div>
                 </div>

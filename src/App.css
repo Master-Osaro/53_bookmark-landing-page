@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 
-*{
+*, 
+*::after,
+*::before{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -96,7 +98,7 @@ nav .logo{
   padding-right: 1rem;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 720px) {
   nav .logo{
       text-align: start;
   }
@@ -198,6 +200,13 @@ nav .logo{
   gap: 5rem;
   margin-bottom: 3rem;
 }
+
+@media only screen and (max-width: 640px) {
+  .features__tabs-header{
+    flex-direction: column;
+    gap: unset;
+  }
+}
 .features__tabs-header p{
   padding: 1.5rem 0;
   font-size: 1.25rem;
@@ -206,19 +215,57 @@ nav .logo{
   font-weight: 500;
 }
 
+@media only screen and (max-width: 640px) {
+  .features__tabs-header p{
+    padding: 0.25rem 0;
+    border-top: 1px solid var(--Grayish-Blue);
+  }
+  .features__tabs-header p:last-child{
+    border-bottom: 1px solid var(--Grayish-Blue);
+  }
+}
+
 
 .features__tabs-header--active{
-  border-bottom: 2px solid var(--Soft-Red);
   color: var(--Very-Dark-Blue);
 }
+.features__tabs-header--active::after{
+  content: "";
+  display: block;
+  padding-top: 1.5rem;
+  border-bottom: 2px solid var(--Soft-Red);
+  position: relative;
+  
+}
+
+@media only screen and (max-width: 640px) {
+  .features__tabs-header--active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .features__tabs-header--active::after{
+    width: 40%;
+    padding-top: unset;
+  }
+}
+
 .features__tabs-content{
   display: flex;
   align-items: center;
   gap: 2rem;
 }
+@media only screen and (max-width: 640px) {
+  .features__tabs-content{
+    flex-direction: column;
+  }
+}
 
 .features__tabs-content--image{
   flex: 1;
+}
+.features__tabs-content--image img{
+  width: 100%;
 }
 .features__tabs-content--text{
   display: flex;
@@ -226,6 +273,14 @@ nav .logo{
   gap: 2rem;
   flex: 1;
 }
+
+@media only screen and (max-width: 640px) {
+  .features__tabs-content--text{
+    text-align: center;
+  }
+}
+
+
 
 
 /* ======== Extension Section =========  */
