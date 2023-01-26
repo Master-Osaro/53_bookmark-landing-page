@@ -688,3 +688,13 @@ footer nav{
   padding: 1rem;
 }
 
+
+/* SVG */
+.twitterIcon path, .facebookIcon path {
+  fill: #fff;
+  transition: all .3s;
+}
+.twitterIcon:hover path, .facebookIcon:hover path {
+  fill: var(--Soft-Red);
+}
+
