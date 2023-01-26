@@ -1,6 +1,7 @@
 import logo from '../images/logo-bookmark-white.svg'
 import facebookIcon from '../images/icon-facebook.svg'
 import twitterIcon from '../images/icon-twitter.svg'
+import errorIcon from '../images/icon-error.svg'
 import { isValid } from '../utils/validation'
 import { useState } from 'react'
 const Footer =()=>{
@@ -15,6 +16,7 @@ const Footer =()=>{
                     <form action="" onSubmit={(e)=>{e.preventDefault()}}>
                         <div className={`input-group ${!valid?"error":email?"success":""}`}>
                             <input type="text" placeholder='Enter your email Address' id='email' onChange={(e)=>{setEmail(e.target.value)}} />
+                            {valid?"": <div className="error-icon__wrapper"><img src={errorIcon} alt="error" className="error-icon" /></div>}
                             <label htmlFor="email">{valid?email?"Thank you! You'll hear from us soon":"" :"Whoops? Make sure its an email"}</label>
                         </div>
                         

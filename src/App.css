@@ -588,6 +588,12 @@ footer{
 .input-group.success{
   background: var(--Soft-Green);
 }
+
+.error-icon__wrapper{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
 .input-group label{
   padding: 0.5rem 0;
   padding-left: 2rem;
