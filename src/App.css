@@ -384,6 +384,7 @@ nav .logo{
 
 @media only screen and (max-width: 720px) {
   .features__tabs-header p{
+    font-size: 1.05rem;
     padding: 0;
     border-top: 1px solid var(--Grayish-Blue);
   }
@@ -479,6 +480,9 @@ nav .logo{
 @media only screen and (max-width: 720px) {
   .features__tabs-content--text{
     text-align: center;
+  }
+  .features__tabs-content--text h2{
+    font-size: 1.25rem;
   }
 }
 
