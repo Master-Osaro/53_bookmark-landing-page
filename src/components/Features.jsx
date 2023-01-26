@@ -1,4 +1,3 @@
-import featureImage from '../images/illustration-features-tab-1.svg'
 import { featuresTabs } from '../data/data'
 import { useState } from 'react'
 const Features =()=>{
