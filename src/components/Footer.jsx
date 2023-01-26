@@ -7,7 +7,7 @@ const Footer =()=>{
     const [valid, setValid] =  useState("falsy");
     return (
         <footer className="section section__footer">
-            <div className="section__footer-form">
+            <div className="section__footer-form" id='contact'>
                 <div className="container">
                     <p>35,000+ already joined</p>
                     <h2>Stay up-to-date with what we’re doing</h2>

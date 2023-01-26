@@ -12,9 +12,9 @@ const Navigation =()=>{
                 <div className="menu-icon" onClick={()=>{setNavOpen(!navOpen)}}><img src={navOpen?menuIconClose:menuIcon} alt="" /></div>
                 <div className={`nav-list__container ${navOpen?"":"hide"}`} id="nav-list__container" >
                     <div className="nav-list">
-                        <a href="#features" className="nav-link">Features</a>
-                        <a href="#pricing" className="nav-link">Pricing</a>
-                        <a href="#contact" className="nav-link">Contact</a>
+                        <a href="#features" className="nav-link" onClick={()=>{setNavOpen(false)}}>Features</a>
+                        <a href="#pricing" className="nav-link" onClick={()=>{setNavOpen(false)}}>Pricing</a>
+                        <a href="#contact" className="nav-link" onClick={()=>{setNavOpen(false)}}>Contact</a>
                         <div className="btn__wrapper">
                             <input type="button" className="btn btn-primary btn-login" value="Login" />
                         </div>

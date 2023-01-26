@@ -3,7 +3,7 @@ import { useState } from 'react'
 const Features =()=>{
     const [currentFeatureNum, setCurrentFeatureNum] = useState(0)
     return (
-        <div className="section section__features">
+        <div className="section section__features" id='features'>
             <div className="container">
                 <div className="features__text">
                     <h2>Features</h2>

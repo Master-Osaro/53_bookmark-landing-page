@@ -21,13 +21,13 @@ const Home =()=>{
                     
                 </div>
                 <div className="section__hero-img">
-                    <img src={heroIllustration} alt="image mockups"  />
+                    <img src={heroIllustration} alt="An illustration showing a bookmark manager"  />
                     <div className="hero-img-bg"></div>
                 </div>
             </div>
             </section>
             <Features />
-            <section className="section section__extension">
+            <section className="section section__extension" id='pricing'>
                 <div className="container">
                     <div className="section__extension-text">
                         <h2>Download the extension</h2>
