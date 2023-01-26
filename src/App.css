@@ -16,6 +16,7 @@
   --Soft-Blue: hsl(231, 69%, 60%);
   --Soft-Blue-Shadow: hsla(231, 69%, 60%,0.1);
   --Soft-Red: hsl(0, 94%, 66%);
+  --Soft-Green: hsl(118, 63%, 43%);
   
   /* ### Neutral */
   --Grayish-Blue: hsl(229, 8%, 60%);
@@ -165,8 +166,7 @@ nav .logo{
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    min-height: 500px;
-
+    min-height: 450px;
   }
   
 }
@@ -566,12 +566,41 @@ footer{
   flex-direction: column;
   gap: 2rem;
 }
+
+.input-group{
+  border-radius: 0.25rem;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 0.1rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .input-group{
+    width: 100%;
+  }
+}
+
+.input-group.error{
+  background: var(--Soft-Red);
+}
+.input-group.success{
+  background: var(--Soft-Green);
+}
+.input-group label{
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  text-align: start;
+  font-size: 12px;
+}
 .section__footer-form input{
   padding: 1rem 2rem;
   border-radius: 0.25rem;
   border: none;
   font-family: inherit;
-  width: fit-content;
+  width: 400px;
+  height: 100%;
 }
 
 @media only screen and (max-width: 720px) {
@@ -590,7 +619,7 @@ footer{
   display: flex;
   gap: 1rem;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 @media only screen and (max-width: 720px) {

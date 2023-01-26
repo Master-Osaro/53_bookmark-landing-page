@@ -1,15 +1,24 @@
 import logo from '../images/logo-bookmark-white.svg'
 import facebookIcon from '../images/icon-facebook.svg'
 import twitterIcon from '../images/icon-twitter.svg'
+import { isValid } from '../utils/validation'
+import { useState } from 'react'
 const Footer =()=>{
+    const [email, setEmail] =  useState("");
+    const [valid, setValid] =  useState(true);
     return (
         <footer className="section section__footer">
             <div className="section__footer-form">
                 <div className="container">
                     <p>35,000+ already joined</p>
                     <h2>Stay up-to-date with what we’re doing</h2>
-                    <form action="">
-                        <input type="text" placeholder='Enter your email Address' required/><button className='btn btn-primary'>Contact Us</button>
+                    <form action="" onSubmit={(e)=>{e.preventDefault()}}>
+                        <div className={`input-group ${!valid?"error":email?"success":""}`}>
+                            <input type="text" placeholder='Enter your email Address' id='email' onChange={(e)=>{setEmail(e.target.value)}} />
+                            <label htmlFor="email">{valid?email?"Thank you! You'll hear from us soon":"" :"Whoops? Make sure its an email"}</label>
+                        </div>
+                        
+                        <button className='btn btn-primary' onClick={()=>{isValid(email)?setValid(true):setValid(false)}}>Contact Us</button>
                     </form>
                     
                 </div>
