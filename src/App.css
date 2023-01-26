@@ -79,6 +79,11 @@ h1, h2, h3, h4, h5{
   border: 2px solid transparent;
   box-shadow: 2px 5px 12px 1px var(--Soft-Blue-Shadow);
 }
+.btn-white:hover{
+  color: var(--Very-Dark-Blue);
+  border: 2px solid var(--Very-Dark-Blue);
+  box-shadow: none;
+}
 
 @media screen and (max-width: 720px) {
   .btn-login{
@@ -160,6 +165,7 @@ nav .logo{
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    min-height: 500px;
 
   }
   
@@ -368,16 +374,26 @@ nav .logo{
   cursor: pointer;
   text-align: center;
   font-weight: 500;
+  transition: all .3s;
+}
+.features__tabs-header p:hover{
+  color: var(--Soft-Red);
 }
 
 @media only screen and (max-width: 720px) {
   .features__tabs-header p{
-    padding: 0.25rem 0;
+    padding: 0;
     border-top: 1px solid var(--Grayish-Blue);
   }
   .features__tabs-header p:last-child{
     border-bottom: 1px solid var(--Grayish-Blue);
   }
+
+  .features__tabs-header p span{
+    display: block;
+    padding: 0.85rem 0;
+  }
+
 }
 
 
@@ -388,7 +404,7 @@ nav .logo{
   content: "";
   display: block;
   padding-top: 1.5rem;
-  border-bottom: 2px solid var(--Soft-Red);
+  border-bottom: 4px solid var(--Soft-Red);
   position: relative;
   
 }

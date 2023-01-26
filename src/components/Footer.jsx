@@ -9,7 +9,7 @@ const Footer =()=>{
                     <p>35,000+ already joined</p>
                     <h2>Stay up-to-date with what we’re doing</h2>
                     <form action="">
-                    <input type="text" placeholder='Enter your email Address' required/><button className='btn btn-primary'>Contact Us</button>
+                        <input type="text" placeholder='Enter your email Address' required/><button className='btn btn-primary'>Contact Us</button>
                     </form>
                     
                 </div>

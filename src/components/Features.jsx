@@ -14,7 +14,7 @@ const Features =()=>{
                 <div className="features__tabs">
                     <div className="features__tabs-header">
                         {featuresTabs.headers.map((headerTab, index)=>{
-                            return <p key={index} onClick={()=>{setCurrentFeatureNum(index)}} className={`${index==currentFeatureNum?'features__tabs-header--active':''}`}>{headerTab}</p>
+                            return <p key={index} onClick={()=>{setCurrentFeatureNum(index)}} className={`${index==currentFeatureNum?'features__tabs-header--active':''}`}><span>{headerTab}</span> </p>
                         })}
                     </div>
                     <div className="features__tabs-content">
