@@ -436,9 +436,38 @@ nav .logo{
 
 .features__tabs-content--image{
   flex: 1;
+  position: relative;
+  margin-bottom: 4rem;
+}
+.features-img-bg{
+  height: 300px;
+  width: 700px;
+  background: var(--Soft-Blue);
+  border-radius: 0 10rem 10rem 0;
+  position: absolute;
+  bottom: -3.5rem;
+  left: -2rem;
+  z-index: 2;
+  transform: translateX(-20rem);
+}
+
+@media screen and (max-width: 720px) {
+
+  .features-img-bg{
+    height: 250px;
+    width: 500px;
+    background: var(--Soft-Blue);
+    position: absolute;
+    left: -4rem;
+    z-index: 2;
+    transform: translateX(-15rem);
+  }
+  
 }
 .features__tabs-content--image img{
+  position: relative;
   width: 100%;
+  z-index: 3;
 }
 .features__tabs-content--text{
   display: flex;

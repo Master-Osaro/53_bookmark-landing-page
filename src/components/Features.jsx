@@ -19,6 +19,7 @@ const Features =()=>{
                     <div className="features__tabs-content">
                         <div className="features__tabs-content--image">
                             <img src={featuresTabs.content[currentFeatureNum].image} alt="" />
+                            <div className="features-img-bg"></div>
                         </div>
                         <div className="features__tabs-content--text">
                             <h2>{featuresTabs.content[currentFeatureNum].title}</h2>
