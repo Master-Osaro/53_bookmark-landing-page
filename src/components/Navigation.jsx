@@ -6,9 +6,9 @@ import { useState } from 'react'
 const Navigation =()=>{
     const [navOpen, setNavOpen] = useState(false)
     return (
-        <header>
+        <header id='home'>
             <nav>
-                <div className="logo"><img src={navOpen?logoWhite:logo} alt="" /></div>
+                <a href='#home'  aria-label="Home" className="logo"><img src={navOpen?logoWhite:logo} alt="" /></a>
                 <div className="menu-icon" onClick={()=>{setNavOpen(!navOpen)}}><img src={navOpen?menuIconClose:menuIcon} alt="" /></div>
                 <div className={`nav-list__container ${navOpen?"":"hide"}`} id="nav-list__container" >
                     <div className="nav-list">
