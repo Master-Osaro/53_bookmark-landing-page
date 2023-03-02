@@ -43,6 +43,7 @@ Users should be able to:
 
 ### What I Learned
 - Styling SVG's in html
+- Custom Error Message
 
 ```html
 
